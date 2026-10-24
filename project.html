@@ -1,0 +1,106 @@
+<html>
+	<head>
+		<title>Мой проект</title>
+		<style>
+      		@font-face {
+        		font-family: 'Pangolin';
+        		src: url("Pangolin-Regular.ttf") format("truetype");
+        		font-weight: normal;
+        		font-style: normal;
+      	}
+
+      		.pangolin-text {
+        		color: cornsilk;
+        		font-size: 45px;
+        		font-family: 'Pangolin', sans-serif;
+      	}
+
+		.pangolin-text-2 {
+        		color: cornsilk;
+        		font-size: 25px;
+        		font-family: 'Pangolin', sans-serif;
+      	}
+    </style>
+	</head>
+	
+	<body style="background-image: url('fon.png');
+  				background-size: 100% 100%;
+  				background-repeat: no-repeat;
+  				background-position: center;">
+		<div align="center">
+			<h1 class="pangolin-text">Minecraft Мод</h1>
+			<img src="filename.png" width="500px" alt="67">
+			<p class="pangolin-text-2">Ты ведь просто зашёл</p>
+			<p class="pangolin-text-2">Поиграть на старую версию</p>
+			<p class="pangolin-text-2">Но что то пошло не так...</p>
+			<button class="pangolin-text-2" style="background-color: #4CAF50; color: white; padding: 24px 48px; border: none; border-radius: 8px; font-size: 32px; cursor: pointer;">
+  				<a href="https://drive.google.com/file/d/1VoVwGUb_fYT-hhoTOyGUDowCtIRf4pTq/view">Скачать</a>
+			</button>
+			<p> </p>
+			<button onclick=quiz() class="pangolin-text-2" style="background-color: #4CAF50; color: white; padding: 24px 48px; border: none; border-radius: 8px; font-size: 32px; cursor: pointer;">
+  				Поиграть в ванильную викторину
+			</button>
+			<p> </p>
+			<button class="pangolin-text-2" style="background-color: #4CAF50; color: white; padding: 12px 24px; border: none; border-radius: 8px; font-size: 16px; cursor: pointer;">
+  				<a href="https://millida.net/">Крутой Хостинг для игры с друзьями в этот мод</a>
+			</button>
+		</div>
+		<script>
+			function quiz() {
+                var mc_questions = [
+                    { 
+                        question: "В каком году придумали Minecraft?\n(a) 2009\n(b) 2010\n(c) 2011",
+                        answer: "a"
+                    },
+
+                    {
+                        question: "Кто создал майнкрафт?\n(a) Microsoft\n(b) Notch\n(c) Jeb",
+                        answer: "b"
+                    },
+
+                    {
+                        question: "На каком языке написан Майнкрафт?\n(a) Java\n(b) Kotlin\n(c) JS",
+                        answer: "a"
+                    },
+
+                    {
+                        question: "Сколько мб весит бедрок издание майнкрафта?\n(a) 3000-4000\n(b) 700-800\n(c) 100-200",
+                        answer: "b"
+                    },
+
+                    {
+                        question: "Как называлась первая версия игры?\n(a) MineCraft\n(b) Это был test.exe и всё\n(c) Cave Game",
+                        answer: "c"
+                    },
+
+                    {
+                        question: "Лучший игрок в истории Майнкрафта?\n(a) Dream\n(b) Daquavis\n(c) Technoblade",
+                        answer: "с"
+                    },
+
+                    {
+                        question: "Донат валюта в Бедрок Майнкрафт?\n(a) MineCoins\n(b) Robux\n(c) USD",
+                        answer: "a"
+                    },
+
+                    {
+                        question: "Какой вид модификаций символизирует Лиса?\n(a) Forge\n(b) NeoForge\n(c) Fabric",
+                        answer: "b"
+                    }
+                ]
+                var score = 0
+                for(let i=0; i < mc_questions.length; i++) {
+                    var response = prompt(mc_questions[i].question);
+                    if(response == mc_questions[i].answer) {
+                        score++
+                        alert("Верно!");
+                    } else {
+                        alert("Неверно!")
+                    }
+                }
+                alert("Игра окнчена, У вас: "+ score + "/" + questions.length +  "очков")
+            }
+		</script>
+	</body>
+
+</html>
